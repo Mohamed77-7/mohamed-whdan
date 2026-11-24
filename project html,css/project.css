@@ -1,0 +1,812 @@
+/* Base & Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Home Page Background */
+body.home-page {
+    position: relative;
+    background-image: url('WhatsApp Image 2026-11-22 at 16.15.01.jpeg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body.home-page::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 0;
+    pointer-events: none;
+}
+
+body.home-page header,
+body.home-page section.hero,
+body.home-page main,
+body.home-page footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* HTML Page Background */
+body.html-page {
+    position: relative;
+    background-image: url('Mohamedwhdan.jpg.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body.html-page::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 6, 23, 0.45);
+    z-index: 0;
+    pointer-events: none;
+}
+
+body.html-page header,
+body.html-page main,
+body.html-page footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* CSS Page Background */
+body.css-page {
+    position: relative;
+    background-image: url('footoo.webp');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body.css-page::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 6, 23, 0.45);
+    z-index: 0;
+    pointer-events: none;
+}
+
+body.css-page header,
+body.css-page main,
+body.css-page footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* About Page Background */
+body.about-page {
+    position: relative;
+    background-image: url('pop123.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body.about-page::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 6, 23, 0.45);
+    z-index: 0;
+    pointer-events: none;
+}
+
+body.about-page header,
+body.about-page main,
+body.about-page footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Developer Page Calm Gradient Background (Isolated from other page images) */
+body.developer-page {
+    position: relative;
+    background: linear-gradient(135deg, #0b1120 0%, #132238 55%, #0d1b2a 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body.developer-page::before {
+    content: none;
+}
+
+body.developer-page header,
+body.developer-page main,
+body.developer-page footer {
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    width: 85%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #38bdf8;
+    text-shadow:
+        -1px -1px 0 #ffffff,
+         1px -1px 0 #ffffff,
+        -1px  1px 0 #ffffff,
+         1px  1px 0 #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #e2e8f0;
+}
+
+/* Hero Section */
+.hero {
+    background-color: transparent;
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 20px 30px 20px;
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85), 0 4px 16px rgba(0, 0, 0, 0.65);
+}
+
+.hero p {
+    font-size: 18px;
+    color: #f1f5f9;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
+}
+
+/*
+  From Uiverse.io by ElSombrero2 - https://uiverse.io/ElSombrero2/tricky-robin-67
+  MIT License, Copyright (c) ElSombrero2 (Rakotondrasoa Nirilala)
+*/
+main {
+    flex: 1;
+}
+
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 20px 0 50px 0;
+}
+
+.uiverse-flip-card {
+    overflow: visible;
+    width: 260px;
+    height: 320px;
+    perspective: 1000px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.uiverse-flip-content {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 500ms;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.uiverse-flip-card:hover .uiverse-flip-content {
+    transform: rotateY(180deg);
+}
+
+.uiverse-flip-front,
+.uiverse-flip-back {
+    background-color: rgba(21, 21, 21, 0.95);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.uiverse-flip-back {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.uiverse-flip-back::before {
+    position: absolute;
+    content: ' ';
+    display: block;
+    width: 180px;
+    height: 160%;
+    animation: rotation_481 5000ms infinite linear;
+}
+
+.html-glow .uiverse-flip-back::before {
+    background: linear-gradient(90deg, transparent, #e34c26, #ff9966, #e34c26, transparent);
+}
+
+.css-glow .uiverse-flip-back::before {
+    background: linear-gradient(90deg, transparent, #2965f1, #38bdf8, #2965f1, transparent);
+}
+
+.uiverse-flip-back-content {
+    position: absolute;
+    width: 97%;
+    height: 97%;
+    background-color: #151515;
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.uiverse-flip-back-content .symbol {
+    font-size: 60px;
+    font-weight: bold;
+    font-family: Consolas, monospace;
+}
+
+.html-glow .symbol {
+    color: #f06529;
+}
+
+.css-glow .symbol {
+    color: #38bdf8;
+}
+
+.uiverse-flip-back-content strong {
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+@keyframes rotation_481 {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.uiverse-flip-front {
+    transform: rotateY(180deg);
+    color: white;
+}
+
+.uiverse-flip-front .uiverse-flip-front-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.uiverse-flip-front-content .uiverse-badge {
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 4px 12px;
+    border-radius: 12px;
+    backdrop-filter: blur(2px);
+    width: fit-content;
+    font-size: 12px;
+}
+
+.uiverse-description {
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 14px;
+    background-color: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+}
+
+.uiverse-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.uiverse-card-text {
+    font-size: 13px;
+    color: #e2e8f0;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.uiverse-card-footer {
+    color: #38bdf8;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.uiverse-flip-front .uiverse-flip-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.uiverse-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ffbb66;
+    position: relative;
+    filter: blur(18px);
+    animation: floating 2600ms infinite linear;
+}
+
+.css-glow .uiverse-circle {
+    background-color: #38bdf8;
+}
+
+.uiverse-circle-bottom {
+    background-color: #ff8866;
+    left: 60px;
+    top: 10px;
+    width: 160px;
+    height: 160px;
+    animation-delay: -800ms;
+}
+
+.css-glow .uiverse-circle-bottom {
+    background-color: #2965f1;
+}
+
+.uiverse-circle-right {
+    background-color: #ff2233;
+    left: 180px;
+    top: -80px;
+    width: 45px;
+    height: 45px;
+    animation-delay: -1800ms;
+}
+
+.css-glow .uiverse-circle-right {
+    background-color: #818cf8;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/*
+  From Uiverse.io by Javierrocadev - https://uiverse.io/Javierrocadev/plastic-turtle-87
+  MIT License, Copyright (c) Javierrocadev (Javier Roca)
+*/
+.profile-bottom-left {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 20;
+}
+
+.turtle-card {
+    position: relative;
+    width: 320px;
+    height: 288px;
+    background-color: rgba(15, 23, 42, 0.94);
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.turtle-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 96px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background: linear-gradient(to bottom left, #bae6fd, #fed7aa, #c2410c);
+    transition: all 500ms ease;
+    z-index: 0;
+}
+
+.turtle-card:hover::before {
+    transform: scale(0.95);
+    height: 176px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.turtle-avatar {
+    width: 112px;
+    height: 112px;
+    margin-top: 32px;
+    border-radius: 9999px;
+    border: 4px solid #0f172a;
+    overflow: hidden;
+    background-color: #1e293b;
+    position: relative;
+    z-index: 10;
+    transition: all 500ms ease;
+}
+
+.turtle-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.turtle-card:hover .turtle-avatar {
+    transform: scale(1.5) translate(-96px, -80px);
+}
+
+.turtle-info {
+    position: relative;
+    z-index: 10;
+    transition: all 500ms ease;
+}
+
+.turtle-card:hover .turtle-info {
+    transform: translateY(-40px);
+}
+
+.turtle-name {
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.turtle-role {
+    font-size: 15px;
+    color: #cbd5e1;
+    margin-top: 2px;
+}
+
+@media (max-width: 600px) {
+    .profile-bottom-left {
+        position: static;
+        display: flex;
+        justify-content: center;
+        margin: 20px auto 30px;
+    }
+}
+
+/* Organized Clean Layout for project2.html, project3.html, project4.html & project5.html */
+.content-page {
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+.html-intro {
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.html-intro h2 {
+    font-size: 34px;
+    color: #38bdf8;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+.html-intro p {
+    font-size: 17px;
+    color: #e2e8f0;
+    max-width: 820px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+.html-sections-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 36px;
+}
+
+.html-topic {
+    padding-left: 16px;
+    border-left: 3px solid #38bdf8;
+}
+
+.html-topic.full-span {
+    grid-column: 1 / -1;
+}
+
+.html-topic h3 {
+    font-size: 21px;
+    color: #38bdf8;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+.html-topic p,
+.html-topic ul {
+    margin-left: 18px;
+    color: #f1f5f9;
+}
+
+.html-topic > p {
+    margin-left: 0;
+}
+
+.html-topic li {
+    margin-bottom: 8px;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.9);
+}
+
+.html-topic code {
+    background-color: rgba(15, 23, 42, 0.85);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.html-topic pre {
+    background-color: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    margin-top: 12px;
+}
+
+.html-topic pre code {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.html-topic table {
+    background-color: rgba(15, 23, 42, 0.85);
+    color: #f8fafc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.html-topic td {
+    border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.html-topic tr:nth-child(even) {
+    background-color: rgba(30, 41, 59, 0.75);
+}
+
+@media (max-width: 768px) {
+    .html-sections-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Guide Pages Styling */
+.card {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    color: #333333;
+}
+
+.card h2 {
+    color: #1e293b;
+    border-bottom: 3px solid #38bdf8;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.card h3 {
+    color: #0f172a;
+    margin: 25px 0 12px 0;
+}
+
+.card ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.card li {
+    margin-bottom: 8px;
+}
+
+/* Code & Tables */
+code {
+    background-color: #e2e8f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: Consolas, monospace;
+    color: #be123c;
+}
+
+pre {
+    background-color: #1e293b;
+    color: #f8fafc;
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+pre code {
+    background-color: transparent;
+    color: #38bdf8;
+    padding: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #cbd5e1;
+}
+
+th {
+    background-color: #1e293b;
+    color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: #38bdf8;
+    color: #0f172a;
+    padding: 10px 22px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+.btn:hover {
+    background-color: #0284c7;
+    color: #ffffff;
+}
+
+.back-btn {
+    margin-top: 32px;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 16px 0;
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    padding: 14px 20px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0;
+}
+
+.footer-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid #ffffff;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.footer-link:hover {
+    background-color: #ffffff;
+    color: #000000;
+}

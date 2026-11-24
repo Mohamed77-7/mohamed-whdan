@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebBasics - CSS Guide</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body class="css-page">
+    <header>
+        <div class="container">
+            <h1 class="logo">WebBasics</h1>
+            <nav>
+                <ul>
+                    <li><a href="project.html">Home</a></li>
+                    <li><a href="project2.html">HTML</a></li>
+                    <li><a href="project3.html">CSS</a></li>
+                    <li><a href="project4.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-page">
+        <div class="container html-clean-content">
+            <div class="html-intro">
+                <h2>CSS Complete Guide</h2>
+                <p><strong>CSS (Cascading Style Sheets)</strong> is responsible for the styling, layout, and responsiveness of HTML elements.</p>
+            </div>
+
+            <div class="html-sections-grid">
+                <section class="html-topic">
+                    <h3>1. Syntax and Selectors</h3>
+                    <p>CSS rules consist of a selector and a declaration block.</p>
+                    <pre><code>selector {
+    property: value;
+    color: #38bdf8;
+}</code></pre>
+                </section>
+
+                <section class="html-topic">
+                    <h3>2. Core Concepts</h3>
+                    <ul>
+                        <li><strong>Box Model:</strong> Every element is wrapped in a box comprising margin, border, padding, and content.</li>
+                        <li><strong>Colors and Fonts:</strong> Properties like <code>color</code>, <code>background-color</code>, and <code>font-family</code> dictate typography and theme.</li>
+                        <li><strong>Flexbox:</strong> A layout module designed for distributing space along a single axis.</li>
+                    </ul>
+                </section>
+
+                <section class="html-topic full-span">
+                    <h3>3. Common Properties Reference</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>Function</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>margin</code></td>
+                                <td>Clears an area outside an element's border.</td>
+                            </tr>
+                            <tr>
+                                <td><code>padding</code></td>
+                                <td>Clears an area around the content inside an element.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+
+            <div class="back-btn">
+                <a href="project.html" class="btn">&larr; Back to Home</a>
+                <a href="project2.html" class="btn">Go to HTML Guide &rarr;</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>College Web Design Project &copy; 2026 | Built with Pure HTML & CSS</p>
+        </div>
+    </footer>
+</body>
+</html>
